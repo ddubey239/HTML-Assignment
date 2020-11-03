@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function toggle_visibility(id) {
+           var home=document.getElementById("home");
+           var about=document.getElementById("about");
+           var contact=document.getElementById("contact");
+           var gallery=document.getElementById("gallery");
+           if(id=="home") {
+                home.style.display='block';
+                about.style.display='none';
+                contact.style.display='none';
+                gallery.style.display='none';
+           }
+           if(id=="about") {
+                home.style.display='none';
+                about.style.display='block';
+                contact.style.display='none';
+                gallery.style.display='none';
+           }
+           if(id=="contact") {
+                home.style.display='none';
+                about.style.display='none';
+                contact.style.display='block';
+                gallery.style.display='none';
+           }
+           if(id=="gallery") {
+                home.style.display='none';
+                about.style.display='none';
+                contact.style.display='none';
+                gallery.style.display='block';
+           }
+    }
+</script>
+</head>
+<body>
+<div class="MainHeader">
+    <div class="SubHeader row">
+        <a href="#" class="header col-sm-3" onclick="toggle_visibility('home');">Home</a>
+        <a href="#" class="header col-sm-3" onclick="toggle_visibility('about');">About</a>
+        <a href="#" class="header col-sm-3" onclick="toggle_visibility('contact');">Contact</a>
+        <a href="#" class="header col-sm-3" onclick="toggle_visibility('gallery');">Gallery</a>
+    </div>
+</div>
+    <div class="container" id="home">
+        <p class="headings" style="margin-right: 100px;">Welcome to Home Page</p><br>
+        <p class="content">Myself Devang Dubey, this is my first project on HTML/CSS where you can get to know about me with the help of above navigation bar.</p>
+        <p id="d">Content</p>
+        <ul class="content">
+            <li>To know me - Go to "About"</li>
+            <li>To chat with me - Go to "Contact"</li>
+            <li>To see my pictures - Go to "Gallery"</li>
+        </ul><br>
+        <h2 style="text-align: center; color: White;" >Thanks for Visiting</h2>
+    </div>
+    <div class="container" id="about" style="display:none">
+        <center style="font-size:30px; font-weight:bold; color: White;">ABOUT ME</center><br>
+        <p id="d">Introduction</p>
+        <p class="content">I Devang Dubey, currently working as a Software Developer in ZeMoSo Technologies. I completed my graduation(B.Tech) from Indian Institute Of Technology(BHU) Varanasi.</p><br>
+        <p id="d">Technical Skills</p>
+        <ul class="content">
+            <li><strong>Operating Systems:</strong> Windows.</li>
+            <li><strong>Programming Languages:</strong> C, C++, Java, MySQL.</li>
+            <li><strong>Web Technologies:</strong> HTML, CSS, Spring Boot.</li>
+            <li><strong>Courses:</strong> Data Structure, Algorithm, DBMS.</li>
+            <li><strong>Soft Skills:</strong> Problem Solving, Critical Thinking, Highly Adaptable.</li>
+        </ul><br>
+        <p id="d">Hobbies and Interests</p>
+        <ul class="content">
+            <li>Travelling</li>
+            <li>Photography</li>
+            <li>Music</li>
+            <li>Bike Riding</li>
+        </ul><br>
+        <p id="d">Social Media</p>
+        <ul class="content">
+            <li>LinkedIn: <a target="blank" href="https://www.linkedin.com/in/devang-dubey-29088a148/">Click Here</a></li>
+            <li>Facebook: <a target-"blank" href="https://www.facebook.com/devang.dubey.1/">Click Here</a></li>
+        </ul><br>
+    </div>
+    <div id="contact" style="display:none">
+        <p class="headings" style="margin-right: 100px;">Drop Message</p><br>
+        <div class="container" style="background-color: #CAD3C8; width:435px;">
+            <form action="https://formspree.io/f/mqkgbbpn" method="post">
+                <label for="name" style="margin-left:40px; margin-top:20px;">Name</label><br>
+                <input type="text" id="name" name="name" placeholder="Your name" required="" size="40" style="margin-left:40px;"><br><br>
+
+                <label for="number" style="margin-left:40px;">Mob Number</label><br>
+                <input type="text" id="number" name="number" placeholder="Your number" required="" size="40" style="margin-left:40px;"><br><br>
+                
+                <label for="email" style="margin-left:40px;">Email</label><br>
+                <input type="text" id="email" name="email" placeholder="Your email" required="" size="40" style="margin-left:40px;"><br><br>
+
+                <label for="message" style="margin-left:40px;">Message</label><br>
+                <textarea id="message" name="message" placeholder="Write something"  rows="3" cols="42" style="margin-left:40px;"></textarea><br><br>
+
+                <input type="submit" value="Send" style="float: right; background-color: Black; color: White; height:30px;width:70px; margin-right:10px; margin-bottom: 10px">
+            </form>
+        </div>
+    </div>
+    <div class="slidershow middle" id="gallery" style="display:none">
+      <div class="slides">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
+        <div class="slide s1">
+          <img src="IMG1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="IMG2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="IMG3.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="IMG4.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="IMG5.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="navigation">
+        <label for="r1" class="bar"></label>
+        <label for="r2" class="bar"></label>
+        <label for="r3" class="bar"></label>
+        <label for="r4" class="bar"></label>
+        <label for="r5" class="bar"></label>
+      </div>
+    </div>
+</body>
+</html>
